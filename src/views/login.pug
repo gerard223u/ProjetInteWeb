@@ -1,0 +1,44 @@
+- const title = "Se connecter"
+
+html(lang="fr")
+    include components/_head.pug
+    body
+        include components/_header.pug
+        .container
+            .row
+                .col-12.col-lg-6.my-auto 
+                    .card.p-3 
+                        form.form-signin
+                            h3 Connectez-vous
+                            .form-group
+                                label.sr-only(for="inputLogin") Login
+                                input#inputLogin.form-control(type="text" placeholder="Login" required autofocus)
+                            .form-group
+                                label.sr-only(for="inputPassword") Mot de passe
+                                input#inputPassword.form-control(type="password" placeholder="Mot de passe" required)
+                            .checkbox.mb-3
+                                label
+                                    input(type="checkbox" value="remember-me")
+                                    |  Se souvenir de moi
+                            button.btn.btn-lg.btn-primary.btn-block(type="submit") Se connecter
+                .col-12.col-lg-6.my-auto
+                    .card.p-3
+                        form.form-signup
+                            h3 Pas de compte ? Inscrivez-vous !
+                            .form-row
+                                .form-group.col-12.col-md-6
+                                    input#inputName.form-control(type="text" placeholder="Nom" required)
+                                .form-group.col-12.col-md-6
+                                    input#inputSurname.form-control(type="text" placeholder="Prénom" required)
+                            .form-group
+                                input#inputLogin.form-control(type="text" placeholder="Login" required)
+                            .form-row
+                                .form-group.col-12.col-md-6
+                                    input#inputPassword.form-control(type="password" placeholder="Mot de passe" required)
+                                .form-group.col-12.col-md-6
+                                    input#inputPassword.form-control(type="password" placeholder="Confirmez votre mot de passe" required)
+                            .form-group
+                                input#inputEmail.form-control(type="email" placeholder="Adresse Mail" required)
+                            button.btn.btn-lg.btn-primary.btn-block(type="submit") S'inscrire
+        include components/_footer.pug
+        include components/_javascript.pug
