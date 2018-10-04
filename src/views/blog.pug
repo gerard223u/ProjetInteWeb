@@ -1,0 +1,31 @@
+- const title = "Blog"
+
+- var categories = {"Aventure" : ["fas fa-map", "danger"], "Education" : ["fas fa-book", "warning"], "Sport" : ["fas fa-football-ball", "secondary"], "Animaux" : ["fas fa-dove", "success"], "Monde" : ["fas fa-globe-americas", "primary"]}
+
+html(lang="fr")
+    include components/_head.pug
+    body
+        include components/_header.pug  
+        section.container.text-center
+            .row
+                each logo, categ in categories
+                    .col-lg-4.col-md-6.col-sm-12.mb-4.mx-auto
+                        .card.m-2.p-3
+                            .view.overlay.rounded.z-depth-2.mb-4
+                                img.img-fluid(src='https://mdbootstrap.com/img/Photos/Others/images/81.jpg', alt='Sample image')
+                            a(class="text-"+logo[1] href='#!')
+                                h6.font-weight-bold.mb-3
+                                i(class=logo[0] + " pr-2")
+                                | #{categ}
+                            h4.font-weight-bold.mb-3
+                                strong Title of the news
+                            p
+                                | by 
+                                a.font-weight-bold Billy Forester
+                                | , 15/07/2018
+                            p.dark-grey-text.text-justify
+                                | Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus voluptas.
+                            a(class=" btn btn-" + logo[1] + " btn-rounded btn-md" href="article.html") Read more
+
+        include components/_footer.pug
+        include components/_javascript.pug
