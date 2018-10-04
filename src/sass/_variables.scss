@@ -1,0 +1,13 @@
+$iconColors: () !default;
+$iconColors: map-merge(
+    (
+        "facebook": #3b5998,
+        "twitter": #00aced,
+        "google-plus": #dd4b39,
+        "linkedin": #0e76a8,
+        "discord": #738adb,
+        "user-circle": white,
+    ), 
+    $iconColors
+);
+    

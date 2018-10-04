@@ -1,0 +1,16 @@
+@each $color, $value in $iconColors {
+    @include fa-variant(".fa-#{$color}", $value);
+}
+
+footer {
+    background: #CCCCCC;
+    color: #444444;
+    a {
+        color: #444444;
+        text-decoration: none;
+        &:hover {
+            color: #888888;
+            text-decoration: none;
+        }
+    }
+}
