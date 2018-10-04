@@ -1,0 +1,16 @@
+- const title = "Quelques statistiques"
+
+html(lang="fr")
+    include components/_head.pug
+    body
+        include components/_header.pug 
+        .container
+            .row.pb-4
+                .col-12.col-lg-6 
+                    #donutchart
+                .col-12.col-lg-6 
+                    #chart_div
+        include components/_footer.pug
+        include components/_javascript.pug
+        script(type="text/javascript" src="https://www.gstatic.com/charts/loader.js")
+        script(src="js/charts.js")
