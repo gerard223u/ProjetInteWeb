@@ -1,0 +1,20 @@
+- var icons = {"https://fr-fr.facebook.com/" : "fa-facebook", "https://twitter.com/?lang=fr" : "fa-twitter", "https://plus.google.com/discover" : "fa-google-plus", "https://fr.linkedin.com/" : "fa-linkedin", "https://discordapp.com/" : "fa-discord"}
+- var items = ["Besoin d'aide ?", "Mentions légales", "Conditions d'utilisation", "Notification de confidentialité"];
+
+footer.mt-4
+    .container
+        .row
+            .col-8.col-md-4
+                each item in items
+                    .col-12.py-2
+                        a(href="#") #{item}
+            .col-4.col-md-8.my-auto
+                .row
+                    each icon, link in icons 
+                        .col-12.col-md-2.mx-auto.py-2.text-justify
+                            center
+                                a(href=link)
+                                    i(class="fab fa-2x mx-auto " + icon)
+        
+        .footer-copyright.text-center
+            | © 2018 Copyright

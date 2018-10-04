@@ -1,0 +1,19 @@
+-  var items = {"index.html" : "Accueil", "services.html" : "Services", "blog.html" : "Blog", "contact.html" : "Contact"}
+
+.navbar.navbar-expand-lg.navbar-light.bg-primary
+    a#login.mr-auto(href="login.html")
+        i.fas.fa-user-circle.fa-2x
+    .ml-auto
+        button.bg-light.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarDropDown" aria-controls="navbarDropDown" aria-expanded="false" aria-label="Toggle navigation")
+            span.navbar-toggler-icon
+    .collapse.navbar-collapse(id="navbarDropDown")
+        ul.navbar-nav.m-auto
+            each value, key in items
+                li.nav-item
+                    a.p-2.nav-link.text-light.ml-4(href=key) #{value}
+            li.nav-item.dropdown.ml-4
+                a.nav-link.dropdown-toggle.text-light(href="#" id="navbarDropdownMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Administrateur
+                .dropdown-menu(aria-labelledby="navbarDropdownMenu")
+                    a.dropdown-item(href="stats.html") Statistiques
+                    .dropdown-divider
+                    a.dropdown-item(href="rights.html") Droits
