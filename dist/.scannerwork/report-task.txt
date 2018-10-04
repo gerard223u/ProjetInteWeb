@@ -1,0 +1,7 @@
+organization=gerard223u-github
+projectKey=gerard223u_ProjetInteWeb
+serverUrl=https://sonarcloud.io
+serverVersion=7.4.0.17856
+dashboardUrl=https://sonarcloud.io/dashboard?id=gerard223u_ProjetInteWeb
+ceTaskId=AWZAnDNkRYhIPtPPj6uP
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWZAnDNkRYhIPtPPj6uP

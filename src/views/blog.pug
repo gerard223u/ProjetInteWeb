@@ -2,6 +2,7 @@
 
 - var categories = {"Aventure" : ["fas fa-map", "danger"], "Education" : ["fas fa-book", "warning"], "Sport" : ["fas fa-football-ball", "secondary"], "Animaux" : ["fas fa-dove", "success"], "Monde" : ["fas fa-globe-americas", "primary"]}
 
+doctype html
 html(lang="fr")
     include components/_head.pug
     body
@@ -15,7 +16,7 @@ html(lang="fr")
                                 img.img-fluid(src='https://mdbootstrap.com/img/Photos/Others/images/81.jpg', alt='Sample image')
                             a(class="text-"+logo[1] href='#!')
                                 h6.font-weight-bold.mb-3
-                                i(class=logo[0] + " pr-2")
+                                em(class=logo[0] + " pr-2")
                                 | #{categ}
                             h4.font-weight-bold.mb-3
                                 strong Title of the news

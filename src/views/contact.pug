@@ -1,6 +1,7 @@
 - const title = "Nous contacter"
 - var contact = {"fa-phone" : "01.23.45.67.89", "fa-at" : "contact-us@mail.com", "fa-envelope" : "11 Rue de l'Université, 88100 Saint-Dié-des-Vosges"}
 
+doctype html
 html(lang="fr")
     include components/_head.pug
     body
@@ -38,7 +39,7 @@ html(lang="fr")
                     .row.text-center
                         each value, icon in contact
                             .col-12.col-md-4
-                                i(class="p-2 fas fa-2x " + icon)
+                                em(class="p-2 fas fa-2x " + icon)
                                 p #{value}
 
 

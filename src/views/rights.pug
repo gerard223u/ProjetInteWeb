@@ -2,7 +2,7 @@
 
 - var users = {"admin" : ["Administrateur", "06/09/2005", "LonelyAdmin@gmail.com"], "intellick" : ["Utilisateur", "25/11/2006", "GreatProgrammer@gmail.com"], "misterTopics" : ["Administrateur", "19/03/2005", "IncredibleAdmin@gmail.com"], "kinLadyWeb" : ["Utilisateur", "30/12/2005", "HollowDesigner@gmail.com"], "cosetod" : ["Utilisateur", "06/10/2006", "PeacefulGamer@gmail.com"], "cleverTinker" : ["Utilisateur", "28/02/2006", "SuperAcidicGeek@gmail.com"]}
 
-
+doctype html
 html(lang="fr")
     include components/_head.pug
     body
@@ -22,7 +22,7 @@ html(lang="fr")
                         td #{value[2]}
                         td 
                             input(type="checkBox")
-            center
+            .text-center
                 .btn.btn-success.m-3 Modifier
                 .btn.btn-danger.m-3 Supprimer
         include components/_footer.pug
