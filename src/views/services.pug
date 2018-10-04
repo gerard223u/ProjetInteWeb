@@ -1,0 +1,19 @@
+- const title = "Nos services"
+- var serviceIcons = ["fa-terminal", "fa-code", "fa-code-branch"]
+
+html(lang="fr")
+    include components/_head.pug
+    body
+        include components/_header.pug 
+        .container
+            -for(var i = 0; i < 3; i++)
+                .card.m-3
+                    .row
+                        .col-12.col-md-6.col-lg-4.my-auto.text-center
+                            i(class="fas fa-7x m-2 " + serviceIcons[i])
+                        .col-12.col-md-6.col-lg-8.py-3.px-5
+                            h2.text-center Service #{i+1}
+                            p.text-justify Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident ex alias fuga, porro dolores necessitatibus aspernatur voluptatem cum ullam itaque architecto dolor praesentium nobis optio culpa quidem debitis voluptatum odit? Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil minima numquam sit voluptas recusandae sapiente dolores beatae ducimus non itaque, adipisci, reiciendis maiores voluptatibus odit eos sequi illo laudantium atque.
+    
+        include components/_footer.pug
+        include components/_javascript.pug
