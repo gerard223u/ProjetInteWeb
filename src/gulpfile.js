@@ -77,7 +77,7 @@ gulp.task("buildSass", () => {
 
 // JS task
 gulp.task("copyJS", () => {
-    gulp.src("js/**/*.js")
+    gulp.src("js/*.js")
     .pipe(uglify())
     .on("error", (error) => {
         console.log(error)

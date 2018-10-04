@@ -1,0 +1,48 @@
+- const title = "Nous contacter"
+- var contact = {"fa-phone" : "01.23.45.67.89", "fa-at" : "contact-us@mail.com", "fa-envelope" : "11 Rue de l'Université, 88100 Saint-Dié-des-Vosges"}
+
+html(lang="fr")
+    include components/_head.pug
+    body
+        include components/_header.pug  
+        .container
+            .row
+                .col-12.col-lg-6
+                    .card.p-2.my-2
+                        h4.text-center Ecrivez-nous !
+                        form
+                            .form-row
+                                .form-group.col-md-6
+                                    label Nom
+                                    input.form-control(type="text")
+                                .form-group.col-md-6
+                                    label Email
+                                    input.form-control(type="email")
+                            .form-group
+                                label Sujet
+                                select.col-12
+                                    option(value="" disabled) Choisir une option
+                                    option(value="1" selected) Feedback
+                                    option(value="2") Reporter un bug
+                                    option(value="3") Demande d'ajout de fonctionnalité
+                            .form-group
+                                textarea(class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" placeholder="Message")
+                            button.btn.btn-info.btn-block(type="submit") Envoyer
+                .col-12.col-lg-6
+                    .card.p-2.my-2
+                        h4.text-center Nous trouver
+                        #map
+            .col-12.mx-auto
+                .card.p-2.my-2
+                    h4.text-center Nous contacter
+                    .row.text-center
+                        each value, icon in contact
+                            .col-12.col-md-4
+                                i(class="p-2 fas fa-2x " + icon)
+                                p #{value}
+
+
+        include components/_footer.pug
+        include components/_javascript.pug
+        script(src="js/maps.js")
+        script(async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap")
